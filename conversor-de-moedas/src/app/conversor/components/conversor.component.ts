@@ -10,10 +10,10 @@ import { MoedaService, ConversorService} from '../services';
 })
 export class ConversorComponent implements OnInit {
 
-	private moedas: Moeda[];
-	private conversao: Conversao;
-	private possuiErro:boolean;
-	private conversaoResponse: ConversaoResponse;
+	 moedas: Moeda[];
+	 conversao: Conversao;
+	 possuiErro:boolean;
+	 conversaoResponse: ConversaoResponse;
 
 	@ViewChild("conversaoForm") conversaoForm: NgForm;
 

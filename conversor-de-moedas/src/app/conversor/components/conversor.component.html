@@ -23,20 +23,32 @@
 				class="form-control"
 				[(ngModel)]="conversao.moedaDe"
 				required>
-					<option></option>
+					<option
+					*ngFor="let moeda fo moedas"
+					[value]="moeda.sigla">
+						{{moeda.sigla}} - {{moeda.descricao}}
+					</option>
 				</select>
 				<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
 				<select
 					name="moedaPara"
 					class="form-control"
 					required>
-						<option>
+						<option
+						*ngFor="let moeda of moedas"
+						[value]="moeda.sigla">
+						{{moeda.sigla}} - {{moeda.descricao}}
 							
 						</option>
+						
 					</select>
 					<input type="submit"
 					 name="Converter"
-					 class="btn btn-success">
+					 class="btn btn-success"
+					 data-toggle="modal"
+					 data-target="#modalCotacao"
+					 (click)="converter()"
+					 [disabled]="!conversaoForm.form.valid">
 
 
 		</form>
