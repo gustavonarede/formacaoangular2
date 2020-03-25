@@ -12,7 +12,7 @@ import{
 })
 export class ConversorService {
 
-	private readonly BASE_URL = "http:// api.fixer.io/latest";
+	private readonly BASE_URL = "http://api.fixer.io/latest";
   constructor(private http: HttpClient) { }
   /**
    * Realiza a chamada para a API de conversão de moedas.
