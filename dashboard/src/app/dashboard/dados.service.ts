@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 
-import { Observale } from 'rxjs/Observable';
-@Injectable({
-  providedIn: 'root'
-})
+import { Observable } from 'rxjs/Observable';
+  providedIn: 'root';
 export class DadosService {
 
 	readonly dados =[
